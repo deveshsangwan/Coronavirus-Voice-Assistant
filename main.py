@@ -131,7 +131,9 @@ def main():
 
 	STATE_PATTERNS = {
 					re.compile("[\w\s]+ cases [\w\s]+"): lambda state: data.get_state_data(state)['state_confirmed'],
-                    re.compile("[\w\s]+ deaths [\w\s]+"): lambda state: data.get_state_data(state)['total_deaths'],
+                    re.compile("[\w\s]+ active [\w\s]+"): lambda state: data.get_state_data(state)['state_active'],
+                    re.compile("[\w\s]+ recovered [\w\s]+"): lambda state: data.get_state_data(state)['state_recovered'],
+                    re.compile("[\w\s]+ deaths [\w\s]+"): lambda state: data.get_state_data(state)['state_deaths'],
 					}
 
 	UPDATE_COMMAND = "update"
