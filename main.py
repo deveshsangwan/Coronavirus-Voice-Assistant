@@ -92,6 +92,8 @@ class Data:
 def speak(text):
     print(text)
     engine = pyttsx3.init()
+    voices = engine.getProperty('voices')
+    engine.setProperty('voice', voices[1].id)
     engine.say(text)
     engine.runAndWait()
 
@@ -118,6 +120,7 @@ def main():
 
 	TOTAL_PATTERNS = {
 					re.compile("[\w\s]+ total cases"): data.get_total_cases,
+                    re.compile("[\w\s]+ total number of cases"): data.get_total_cases,
                     re.compile("[\w\s]+ total cofirmed cases"): data.get_total_cases,
                     re.compile("[\w\s]+ total [\w\s]+ active cases"):data.get_total_active,
 					re.compile("[\w\s]+ total active cases"): data.get_total_active,
