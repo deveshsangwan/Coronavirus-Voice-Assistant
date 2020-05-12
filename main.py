@@ -30,7 +30,8 @@ class Data:
 
 		for content in data:
 			if content['name'] == "Confirmed":
-				return content['value']
+				s = 'the total number of COVID-19 cases in India now are ' + content['value']
+				return s
 
 	def get_total_active(self):
 		data = self.data['total']
@@ -121,6 +122,10 @@ def main():
 	TOTAL_PATTERNS = {
 					re.compile("[\w\s]+ total cases"): data.get_total_cases,
                     re.compile("[\w\s]+ total number of cases"): data.get_total_cases,
+					re.compile("[\w\s]+ number of cases"): data.get_total_cases,
+					re.compile("[\w\s]+ total cases in India"): data.get_total_cases,
+                    re.compile("[\w\s]+ total number of cases in India"): data.get_total_cases,
+					re.compile("[\w\s]+ number of cases in India"): data.get_total_cases,
                     re.compile("[\w\s]+ total cofirmed cases"): data.get_total_cases,
                     re.compile("[\w\s]+ total [\w\s]+ active cases"):data.get_total_active,
 					re.compile("[\w\s]+ total active cases"): data.get_total_active,
