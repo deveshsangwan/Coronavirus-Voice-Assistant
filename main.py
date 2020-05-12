@@ -121,10 +121,8 @@ def main():
 
 	TOTAL_PATTERNS = {
 					re.compile("[\w\s]+ total cases"): data.get_total_cases,
-                    re.compile("[\w\s]+ total number of cases"): data.get_total_cases,
-					re.compile("[\w\s]+ number of cases"): data.get_total_cases,
-					re.compile("[\w\s]+ total cases in India"): data.get_total_cases,
-                    re.compile("[\w\s]+ total number of cases in India"): data.get_total_cases,
+                    re.compile("[\w\s]+ total [\w\s]+ cases"): data.get_total_cases,
+                    re.compile("[\w\s]+ total [\w\s]+ cases [\w\s]+ India"): data.get_total_cases,
 					re.compile("[\w\s]+ number of cases in India"): data.get_total_cases,
                     re.compile("[\w\s]+ total cofirmed cases"): data.get_total_cases,
                     re.compile("[\w\s]+ total [\w\s]+ active cases"):data.get_total_active,
