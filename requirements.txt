@@ -1,6 +1,6 @@
 certifi==2020.12.5
 chardet==4.0.0
-comtypes==1.1.8
+comtypes==1.1.9
 idna==3.1
 pyttsx3==2.90
 pywin32==300
