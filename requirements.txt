@@ -3,7 +3,7 @@ chardet==4.0.0
 comtypes==1.1.10
 idna==3.1
 pyttsx3==2.90
-pywin32==300
+pywin32==301
 requests==2.25.1
 SpeechRecognition==3.8.1
 urllib3==1.26.5
