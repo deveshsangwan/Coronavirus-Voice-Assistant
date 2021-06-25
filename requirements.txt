@@ -6,4 +6,4 @@ pyttsx3==2.90
 pywin32==301
 requests==2.25.1
 SpeechRecognition==3.8.1
-urllib3==1.26.5
+urllib3==1.26.6
